@@ -1,51 +1,136 @@
-# To-Do List
+# 🧠 To-Do Inteligente
 
-Aplicação web simples de lista de tarefas criada com React, TypeScript e Vite.
+## 📌 Sobre o Projeto
 
-## Visão geral
+O **To-Do Inteligente** é uma aplicação web desenvolvida com foco na organização de tarefas do dia a dia. O sistema permite ao usuário visualizar, concluir e desmarcar tarefas de forma dinâmica, com atualização em tempo real dos indicadores do dashboard.
 
-Este projeto oferece uma interface de gerenciamento de tarefas com componentes reutilizáveis para cabeçalho, barra lateral e painel principal. A aplicação está organizada em uma estrutura moderna de frontend com TypeScript e CSS modular.
+Este projeto foi desenvolvido como parte da disciplina de **Desenvolvimento de Software Web**, com o objetivo de aplicar conceitos modernos de desenvolvimento front-end utilizando **React**, **TypeScript** e **Bootstrap**.
 
-## Tecnologias
+---
 
-- React 19
-- TypeScript 5
-- Vite
-- ESLint
+## 🎯 Objetivos do Projeto
 
-## Estrutura do projeto
+* Aplicar conceitos de componentização em React
+* Utilizar TypeScript para tipagem segura dos dados
+* Criar uma interface responsiva com Bootstrap
+* Implementar controle de estado com atualização dinâmica
+* Seguir boas práticas de organização de código
 
-- `index.html` - ponto de entrada HTML
-- `package.json` - dependências e scripts do projeto
-- `src/`
-  - `App.tsx` - componente principal da aplicação
-  - `main.tsx` - inicialização do React
-  - `components/` - componentes reutilizáveis (`Header`, `Sidebar`, `TaskCard`)
-  - `pages/` - páginas da aplicação (`Home`)
-  - `styles/` - estilos CSS
-  - `types/` - definições de tipos TypeScript
+---
 
-## Scripts úteis
+## ⚙️ Tecnologias Utilizadas
 
-- `npm install` - instala dependências
-- `npm run dev` - inicia o servidor de desenvolvimento
-- `npm run build` - gera a versão de produção
-- `npm run preview` - visualiza a build de produção localmente
-- `npm run lint` - verifica o código com ESLint
+* ⚛️ React (com Vite)
+* 🟦 TypeScript
+* 🎨 Bootstrap (via CDN)
+* 💅 CSS personalizado
 
-## Como executar
+---
 
-1. Instale as dependências:
-   ```bash
-   npm install
-   ```
-2. Inicie o servidor de desenvolvimento:
-   ```bash
-   npm run dev
-   ```
-3. Abra o endereço mostrado no terminal para ver a aplicação.
+## 🧱 Arquitetura do Projeto
 
-## Observações
+A aplicação foi estruturada seguindo o princípio de **separação de responsabilidades**, dividindo a interface em componentes reutilizáveis:
 
-- O projeto é configurado como `type: module` no `package.json`.
-- Os estilos estão importados diretamente em `src/App.tsx`.
+```
+src/
+ ├── components/
+ │    ├── Header.tsx
+ │    ├── Sidebar.tsx
+ │    ├── Dashboard.tsx
+ │    ├── TaskCard.tsx
+ │
+ ├── pages/
+ │    └── Home.tsx
+ │
+ ├── types/
+ │    └── Task.ts
+ │
+ ├── styles/
+ │    └── custom.css
+```
+
+### 🔍 Descrição dos Componentes
+
+* **Header** → Responsável pelo topo da aplicação
+* **Sidebar** → Menu lateral de navegação
+* **Dashboard** → Exibe indicadores (total, concluídas, pendentes)
+* **TaskCard** → Representa uma tarefa individual
+* **Home** → Página principal que gerencia estado e lógica
+
+Essa organização facilita:
+
+* manutenção
+* reutilização de código
+* escalabilidade do sistema
+
+---
+
+## 🔄 Funcionalidades
+
+✔ Listagem de tarefas
+✔ Conclusão de tarefas
+✔ Desmarcar tarefas
+✔ Dashboard com contadores dinâmicos
+✔ Atualização em tempo real
+✔ Interface responsiva
+
+---
+
+## 🧠 Lógica de Funcionamento
+
+A aplicação utiliza o hook `useState` para gerenciar o estado das tarefas.
+Cada interação do usuário (como concluir ou desmarcar uma tarefa) atualiza o estado global, refletindo automaticamente:
+
+* Mudança visual da tarefa
+* Atualização dos dados no dashboard
+
+---
+
+## 📱 Responsividade
+
+A interface foi construída utilizando o sistema de grid do Bootstrap (12 colunas), garantindo:
+
+* Layout adaptável em diferentes tamanhos de tela
+* Sidebar lateral no desktop
+* Empilhamento no mobile
+
+---
+
+## 🧾 Requisitos Atendidos
+
+✔ Componentização
+✔ Organização de pastas
+✔ Tipagem com TypeScript
+✔ Uso de Bootstrap + CSS externo
+✔ HTML semântico (`header`, `main`, `section`, `aside`, `address`)
+✔ Dashboard dinâmico
+✔ Responsividade
+
+---
+
+## 🚀 Como Executar o Projeto
+
+```bash
+# Instalar dependências
+npm install
+
+# Rodar o projeto
+npm run dev
+```
+
+---
+
+## 👨‍💻 Autor
+
+**Matteo Caetano**
+📅 2026
+📚 Análise e Desenvolvimento de Sistemas
+📖 Disciplina: Desenvolvimento de Software Web
+
+---
+
+## 🎥 Observação
+
+Este projeto acompanha um vídeo explicativo demonstrando as decisões técnicas, arquitetura e funcionamento da aplicação.
+
+---
